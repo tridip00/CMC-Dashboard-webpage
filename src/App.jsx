@@ -13,6 +13,8 @@ import {
   Minimize2 // Icon for exiting fullscreen
 } from 'lucide-react';
 
+import pslogo from "../src/assets/cmc-core.png";
+
 const DashboardApp = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -98,11 +100,12 @@ const DashboardApp = () => {
         <div className="h-16 flex items-center justify-between px-6 border-b border-slate-800">
           <div className={`flex items-center gap-3 overflow-hidden transition-all duration-300 ${!isSidebarOpen && !isMobile ? 'opacity-0 w-0' : 'opacity-100'}`}>
             <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shrink-0">
-              <Building2 className="text-white" size={18} />
+                <img src= {pslogo} alt="PS Group Logo" className="w-full h-full object-contain rounded-lg" 
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-white tracking-wide">PS GROUP</span>
-              <span className="text-[10px] text-slate-400 uppercase tracking-wider">Project Monitoring</span>
+              <span className="text-[10px] text-slate-400 uppercase tracking-wider">CMC Department</span>
             </div>
           </div>
           
@@ -160,7 +163,7 @@ const DashboardApp = () => {
         <div className="p-4 border-t border-slate-800">
           <button className={`w-full flex items-center gap-3 p-2 rounded-lg hover:bg-slate-800 transition-colors ${!isSidebarOpen && !isMobile ? 'justify-center' : ''}`}>
             <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center shrink-0">
-              <span className="text-xs font-bold text-white">JD</span>
+              <span className="text-xs font-bold text-white">TK</span>
             </div>
             
             <div className={`flex flex-col items-start overflow-hidden transition-all duration-300 ${!isSidebarOpen && !isMobile ? 'w-0 opacity-0 hidden' : 'w-auto opacity-100'}`}>
@@ -189,7 +192,7 @@ const DashboardApp = () => {
                 {dashboards[activeTab].title}
               </h2>
               <span className="text-xs text-slate-500">
-                Last updated: Just now
+                Updated via scheduled refresh
               </span>
             </div>
           </div>
@@ -254,7 +257,7 @@ const DashboardApp = () => {
           
           {/* Footer Info - Hidden in fullscreen mode */}
           <div className={`mt-4 flex justify-between items-center text-xs text-slate-500 px-2 transition-opacity duration-300 ${isFullScreen ? 'opacity-0 hidden' : 'opacity-100'}`}>
-            <span>© 2024 PS Group - Project Monitoring Dept.</span>
+            <span>© 2025 PS Group - CMC Department</span>
             <span className="hidden md:inline">Confidential Data - Internal Use Only</span>
           </div>
         </div>
