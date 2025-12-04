@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+
+/* --- GLOBAL STYLES (Optional but recommended) --- 
+   This ensures the body uses the full height and applies the dark theme 
+   and Inter font defined in your App.jsx, but only if you didn't apply 
+   them directly to the <div> in App.jsx. 
+*/
+
+html {
+  /* Prevent horizontal scrolling issues often seen in development */
+  overflow-x: hidden;
+}
+
+body {
+  /* Set a default background color for the body */
+  background-color: #0d0d0d; 
+  /* Prevent margin issues */
+  margin: 0;
+  /* Use the Inter font defined in tailwind.config.js */
+  font-family: 'Inter', sans-serif;
+}
