@@ -55,7 +55,7 @@ const DashboardApp = () => {
       title: 'Task Management',
       subtitle: 'Track deliverables and timelines',
       icon: <ClipboardList size={20} />,
-      url: "https://app.fabric.microsoft.com/reportEmbed?reportId=7b3e5466-7fc5-4eed-b112-14deab98d329&autoAuth=true&ctid=d93ab9c6-31df-4214-9557-88af67b8d358",
+      url: "https://app.fabric.microsoft.com/reportEmbed?reportId=bbf9e0d0-2c4f-4fd5-803d-39f86fda4a00&autoAuth=true&ctid=d93ab9c6-31df-4214-9557-88af67b8d358",
       color: "text-emerald-400",
       bgColor: "bg-emerald-400/10"
     },
