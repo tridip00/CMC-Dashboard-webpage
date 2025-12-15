@@ -13,7 +13,7 @@ import {
   Minimize2 // Icon for exiting fullscreen
 } from 'lucide-react';
 
-import pslogo from "../src/assets/cmc-core.png";
+import pslogo from "../src/assets/G-Groups-removebg-preview.png";
 
 const DashboardApp = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -100,7 +100,7 @@ const DashboardApp = () => {
         <div className="h-16 flex items-center justify-between px-6 border-b border-slate-800">
           <div className={`flex items-center gap-3 overflow-hidden transition-all duration-300 ${!isSidebarOpen && !isMobile ? 'opacity-0 w-0' : 'opacity-100'}`}>
             <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center shrink-0">
-                <img src= {pslogo} alt="PS Group Logo" className="w-full h-full object-contain rounded-lg" 
+                <img src= {pslogo} alt="PS Group Logo" className="w-full h-full object-contain rounded-lg bg-amber-50" 
               />
             </div>
             <div className="flex flex-col">
