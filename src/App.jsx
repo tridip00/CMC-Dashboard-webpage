@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   ClipboardList,
   BarChart3,
+  LandPlot,
   Building2,
   Menu,
   Bell,
@@ -32,6 +33,11 @@ export default function App() {
       url: "https://app.fabric.microsoft.com/reportEmbed?reportId=bf867815-26c6-4cf6-87b1-9094baadc874&autoAuth=true&ctid=d93ab9c6-31df-4214-9557-88af67b8d358",
     },
     {
+      title: "Upcoming Projects (L1)",
+      icon: <LandPlot size={18} />,
+      url: "https://app.fabric.microsoft.com/reportEmbed?reportId=a123173a-4de3-45fc-a7e6-247e3df37529&autoAuth=true&ctid=d93ab9c6-31df-4214-9557-88af67b8d358",
+    },
+    {
       title: "Ongoing Projects (L1)",
       icon: <Building2 size={18} />,
       url: "https://app.fabric.microsoft.com/reportEmbed?reportId=c6b1350b-4820-40ab-bf4d-643bfeaebc93&autoAuth=true&ctid=d93ab9c6-31df-4214-9557-88af67b8d358",
@@ -40,20 +46,18 @@ export default function App() {
 
   return (
     <div
-      className={`flex h-screen w-screen overflow-hidden transition-colors ${
-        darkMode
+      className={`flex h-screen w-screen overflow-hidden transition-colors ${darkMode
           ? "bg-slate-950 text-slate-200"
           : "bg-slate-100 text-slate-900"
-      }`}
+        }`}
     >
       {/* Sidebar */}
       {!fullscreen && (
         <aside
-          className={`transition-all duration-300 border-r ${
-            darkMode
+          className={`transition-all duration-300 border-r ${darkMode
               ? "bg-slate-900 border-slate-800"
               : "bg-white border-slate-200"
-          } ${sidebarOpen ? "w-64" : "w-16"}`}
+            } ${sidebarOpen ? "w-64" : "w-16"}`}
         >
           <div className="h-12 flex items-center gap-3 px-4 border-b border-slate-700/40">
             <img src={pslogo} className="h-7 w-7 object-contain" />
@@ -69,13 +73,12 @@ export default function App() {
               <button
                 key={i}
                 onClick={() => setActiveTab(i)}
-                className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition ${
-                  activeTab === i
+                className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition ${activeTab === i
                     ? darkMode
                       ? "bg-indigo-600/20 text-white"
                       : "bg-indigo-100 text-indigo-700"
                     : "opacity-80 hover:opacity-100"
-                }`}
+                  }`}
               >
                 {d.icon}
                 {sidebarOpen && <span>{d.title}</span>}
@@ -90,11 +93,10 @@ export default function App() {
         {/* Header */}
         {!fullscreen && (
           <header
-            className={`h-12 flex items-center justify-between px-4 border-b ${
-              darkMode
+            className={`h-12 flex items-center justify-between px-4 border-b ${darkMode
                 ? "bg-slate-950/80 border-slate-800"
                 : "bg-white border-slate-200"
-            }`}
+              }`}
           >
             <div className="flex items-center gap-2">
               <button
@@ -157,9 +159,8 @@ export default function App() {
         {/* Footer */}
         {!fullscreen && (
           <footer
-            className={`h-8 flex items-center justify-center text-xs ${
-              darkMode ? "text-slate-500" : "text-slate-600"
-            }`}
+            className={`h-8 flex items-center justify-center text-xs ${darkMode ? "text-slate-500" : "text-slate-600"
+              }`}
           >
             © 2025 Central Monitoring Cell (CMC) Department
           </footer>
